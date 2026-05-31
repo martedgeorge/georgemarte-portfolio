@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>George Marte | Graphic Designer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#0a0a0a;
+color:white;
+font-family:'Space Grotesk',sans-serif;
+overflow-x:hidden;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+padding:24px 5%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(10,10,10,.85);
+backdrop-filter:blur(20px);
+z-index:999;
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+line-height:.9;
+color:#fff;
+}
+
+.nav-links{
+display:flex;
+gap:30px;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+font-weight:500;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+padding:0 6%;
+position:relative;
+}
+
+.hero h1{
+font-size:clamp(5rem,12vw,12rem);
+line-height:.85;
+font-weight:700;
+letter-spacing:-6px;
+}
+
+.hero p{
+margin-top:25px;
+max-width:700px;
+font-size:1.2rem;
+color:#bfbfbf;
+}
+
+.orange{
+color:#ff5a1f;
+}
+
+.hero-btn{
+margin-top:40px;
+display:inline-block;
+padding:16px 28px;
+background:#ff5a1f;
+color:black;
+text-decoration:none;
+border-radius:999px;
+font-weight:700;
+}
+
+.section{
+padding:120px 6%;
+}
+
+.section-title{
+font-size:4rem;
+margin-bottom:60px;
+letter-spacing:-2px;
+}
+
+.project{
+margin-bottom:120px;
+border:1px solid rgba(255,255,255,.08);
+border-radius:30px;
+overflow:hidden;
+background:#111;
+}
+
+.project-header{
+padding:60px;
+}
+
+.project-number{
+color:#ff5a1f;
+font-size:.8rem;
+margin-bottom:20px;
+}
+
+.project-title{
+font-size:clamp(3rem,7vw,7rem);
+line-height:.9;
+}
+
+.project-subtitle{
+margin-top:20px;
+font-size:1.4rem;
+color:#ccc;
+}
+
+.project-body{
+padding:60px;
+border-top:1px solid rgba(255,255,255,.08);
+}
+
+.project-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+margin-top:40px;
+}
+
+.mockup{
+height:280px;
+background:#1b1b1b;
+border-radius:20px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#666;
+font-size:.9rem;
+}
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+margin-top:30px;
+}
+
+.skill{
+padding:12px 18px;
+background:#151515;
+border-radius:999px;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.contact{
+background:#ff5a1f;
+padding:100px 6%;
+color:black;
+}
+
+.contact h2{
+font-size:5rem;
+line-height:.9;
+margin-bottom:30px;
+}
+
+.contact a{
+display:block;
+margin-top:15px;
+font-size:1.2rem;
+color:black;
+text-decoration:none;
+font-weight:700;
+}
+
+footer{
+padding:40px 6%;
+color:#777;
+}
+
+@media(max-width:900px){
+
+.project-grid{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:5rem;
+}
+
+.contact h2{
+font-size:3rem;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">
+GEORGE<br>MARTE
+</div>
+
+<div class="nav-links">
+<a href="#work">Work</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<section class="hero">
+
+<div>
+<h1>
+WORK FIRST.<br>
+<span class="orange">NOISE SECOND.</span>
+</h1>
+
+<p>
+Graphic Designer & Aspiring Art Director creating branding,
+packaging, campaign concepts, posters and visual systems
+inspired by culture, music and streetwear.
+</p>
+
+<a href="#work" class="hero-btn">View Work</a>
+</div>
+
+</section>
+
+<section class="section" id="work">
+
+<h2 class="section-title">Selected Work</h2>
+
+<div class="project">
+<div class="project-header">
+<div class="project-number">01</div>
+<div class="project-title">OVERLOAD</div>
+<div class="project-subtitle">Caffeinated Chaos</div>
+</div>
+
+<div class="project-body">
+<p>Conceptual energy drink branding built around speed, intensity and controlled chaos.</p>
+
+<div class="project-grid">
+<div class="mockup">UPLOAD OVERLOAD MOCKUP</div>
+<div class="mockup">UPLOAD OVERLOAD MOCKUP</div>
+<div class="mockup">UPLOAD OVERLOAD MOCKUP</div>
+</div>
+</div>
+</div>
+
+<div class="project">
+<div class="project-header">
+<div class="project-number">02</div>
+<div class="project-title">LOST & FOUND</div>
+<div class="project-subtitle">Mapping Memory Through Music</div>
+</div>
+
+<div class="project-body">
+<p>Festival identity built around nostalgia, discovery and city culture.</p>
+
+<div class="project-grid">
+<div class="mockup">UPLOAD PROJECT</div>
+<div class="mockup">UPLOAD PROJECT</div>
+<div class="mockup">UPLOAD PROJECT</div>
+</div>
+</div>
+</div>
+
+<div class="project">
+<div class="project-header">
+<div class="project-number">03</div>
+<div class="project-title">NIGHT SHIFT</div>
+<div class="project-subtitle">Brewed For The Late Hours</div>
+</div>
+
+<div class="project-body">
+<p>Beer branding system inspired by nightlife, energy and grit.</p>
+
+<div class="project-grid">
+<div class="mockup">UPLOAD PROJECT</div>
+<div class="mockup">UPLOAD PROJECT</div>
+<div class="mockup">UPLOAD PROJECT</div>
+</div>
+</div>
+</div>
+
+<div class="project">
+<div class="project-header">
+<div class="project-number">04</div>
+<div class="project-title">ART CLUB</div>
+<div class="project-subtitle">Creative Playground</div>
+</div>
+
+<div class="project-body">
+<p>Playful visual identity built around childhood imagination.</p>
+
+<div class="project-grid">
+<div class="mockup">UPLOAD PROJECT</div>
+<div class="mockup">UPLOAD PROJECT</div>
+<div class="mockup">UPLOAD PROJECT</div>
+</div>
+</div>
+</div>
+
+<div class="project">
+<div class="project-header">
+<div class="project-number">05</div>
+<div class="project-title">NIKE</div>
+<div class="project-subtitle">I'm Lovin' Every Step</div>
+</div>
+
+<div class="project-body">
+<p>Campaign concept exploring movement, food culture and nostalgia.</p>
+
+<div class="project-grid">
+<div class="mockup">UPLOAD PROJECT</div>
+<div class="mockup">UPLOAD PROJECT</div>
+<div class="mockup">UPLOAD PROJECT</div>
+</div>
+</div>
+</div>
+
+<div class="project">
+<div class="project-header">
+<div class="project-number">06</div>
+<div class="project-title">FRAT HOUSE</div>
+<div class="project-subtitle">College Chaos Branded</div>
+</div>
+
+<div class="project-body">
+<p>Bar branding system built around college culture and energy.</p>
+
+<div class="project-grid">
+<div class="mockup">UPLOAD PROJECT</div>
+<div class="mockup">UPLOAD PROJECT</div>
+<div class="mockup">UPLOAD PROJECT</div>
+</div>
+</div>
+</div>
+
+</section>
+
+<section class="section" id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<p style="max-width:800px;font-size:1.2rem;color:#bbb;">
+I'm George Marte, a graphic designer and aspiring art director focused on branding,
+packaging, campaigns, typography and visual storytelling. My work blends culture,
+music, streetwear and bold visual systems to create memorable design experiences.
+</p>
+
+<div class="skills">
+<div class="skill">Branding</div>
+<div class="skill">Art Direction</div>
+<div class="skill">Packaging</div>
+<div class="skill">Typography</div>
+<div class="skill">Poster Design</div>
+<div class="skill">Adobe Creative Suite</div>
+<div class="skill">Figma</div>
+<div class="skill">Motion Design</div>
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2>Let's Create<br>Something Great.</h2>
+
+<a href="mailto:martedgeorge@gmail.com">
+martedgeorge@gmail.com
+</a>
+
+<a href="https://instagram.com/kiddi3go" target="_blank">
+@kiddi3go
+</a>
+
+</section>
+
+<footer>
+© 2026 George Marte
+</footer>
+
+</body>
+</html>
