@@ -31,38 +31,30 @@ a{text-decoration:none;color:inherit}
 nav{
 position:fixed;top:0;left:0;width:100%;z-index:999;
 padding:20px 5%;display:flex;justify-content:space-between;align-items:center;
-background:rgba(247,244,238,.86);backdrop-filter:blur(18px);
+background:rgba(247,244,238,.88);backdrop-filter:blur(18px);
 border-bottom:1px solid var(--line)
 }
 
-.logo{display:flex;align-items:center;gap:12px;font-weight:800}
+.logo{display:flex;align-items:center;gap:14px;font-weight:800}
 
 .logo-mark{
-width:58px;height:58px;position:relative;border-radius:16px;
-background:var(--ink);transform:rotate(-4deg);
-box-shadow:7px 7px 0 var(--lavender);overflow:hidden;
+width:64px;height:64px;display:flex;align-items:center;justify-content:center;
+border-radius:20px;background:white;border:1px solid rgba(17,17,17,.08);
+box-shadow:0 8px 24px rgba(17,17,17,.08);transition:.25s ease;
 }
+.logo:hover .logo-mark{transform:rotate(-6deg) translateY(-2px)}
+.gm-symbol{width:43px;height:43px}
+.gm-symbol .shape-1{fill:var(--ink)}
+.gm-symbol .shape-2{fill:var(--clay)}
+.gm-symbol .shape-3{fill:var(--lavender)}
+.gm-symbol .shape-4{fill:var(--butter)}
 
-.logo-mark:before{
-content:"G";position:absolute;left:7px;top:2px;
-font-family:'Syne',sans-serif;font-weight:800;font-size:38px;
-letter-spacing:-6px;color:var(--bg);
+.logo-text{display:flex;flex-direction:column;line-height:1}
+.logo-text span:first-child{
+font-size:11px;letter-spacing:3px;text-transform:uppercase;
+color:var(--muted);font-weight:800
 }
-
-.logo-mark:after{
-content:"M";position:absolute;right:4px;bottom:-2px;
-font-family:'Syne',sans-serif;font-weight:800;font-size:38px;
-letter-spacing:-6px;color:var(--clay);
-}
-
-.logo-mark .dot{
-position:absolute;width:10px;height:10px;border-radius:50%;
-background:var(--butter);right:8px;top:9px;
-}
-
-.logo-text{display:flex;flex-direction:column;line-height:1;text-transform:uppercase}
-.logo-text span:first-child{font-size:11px;letter-spacing:3px;color:var(--muted);font-weight:800}
-.logo-text span:last-child{font-size:17px;letter-spacing:1px;font-weight:900}
+.logo-text span:last-child{font-size:17px;font-weight:900;letter-spacing:-.5px}
 
 .nav-links{
 display:flex;gap:28px;font-size:12px;font-weight:800;
@@ -74,19 +66,16 @@ text-transform:uppercase;letter-spacing:2px;color:var(--muted)
 min-height:100vh;padding:150px 6% 90px;display:grid;align-items:end;
 position:relative;overflow:hidden
 }
-
 .hero:before{
 content:"";position:absolute;width:520px;height:520px;border-radius:50%;
 background:var(--lavender);right:-160px;top:100px;opacity:.35;filter:blur(20px)
 }
-
 .hero:after{
 content:"";position:absolute;width:360px;height:360px;border-radius:50%;
 background:var(--butter);left:-130px;bottom:70px;opacity:.5;filter:blur(12px)
 }
 
 .hero-inner{position:relative;z-index:2;max-width:1280px}
-
 .hero-label{
 display:inline-flex;gap:10px;align-items:center;background:var(--ink);color:var(--bg);
 padding:10px 16px;border-radius:999px;font-size:12px;font-weight:900;
@@ -95,15 +84,13 @@ text-transform:uppercase;letter-spacing:2px;margin-bottom:28px;transform:rotate(
 .hero-label span{width:10px;height:10px;border-radius:50%;background:var(--butter);display:inline-block}
 
 .hero h1{
-font-family:'Syne',sans-serif;font-size:clamp(4rem,10vw,11rem);
-line-height:.88;letter-spacing:-6px;max-width:1000px;font-weight:800
+font-family:'Syne',sans-serif;font-size:clamp(4rem,9vw,10rem);
+line-height:.9;letter-spacing:-6px;max-width:1080px;font-weight:800
 }
-
 .hero-copy{
 margin-top:30px;max-width:720px;font-size:1.18rem;
 line-height:1.65;color:var(--muted)
 }
-
 .hero-meta{margin-top:24px;display:flex;flex-wrap:wrap;gap:12px}
 .pill{
 padding:10px 14px;border:1px solid var(--line);border-radius:999px;
@@ -119,6 +106,17 @@ text-transform:uppercase;letter-spacing:1px;transition:.2s ease
 .btn-dark:hover{transform:translateY(-3px);box-shadow:0 10px 0 var(--lavender)}
 .btn-light{border:1px solid var(--line);background:var(--paper)}
 .btn-light:hover{transform:translateY(-3px);box-shadow:0 10px 0 var(--butter)}
+
+.featured-project{
+margin-top:70px;padding-left:20px;border-left:4px solid var(--clay)
+}
+.featured-project span{
+font-size:12px;text-transform:uppercase;letter-spacing:2px;color:var(--muted);font-weight:900
+}
+.featured-project h3{
+font-family:'Syne';font-size:34px;margin-top:10px;letter-spacing:-1px
+}
+.featured-project p{margin-top:6px;color:var(--muted);font-weight:700}
 
 .marquee{
 overflow:hidden;background:var(--ink);color:var(--bg);
@@ -199,7 +197,6 @@ letter-spacing:2px;font-size:10px
 display:grid;grid-template-columns:2fr 1fr 1fr;gap:18px;
 padding:32px;border-top:1px solid var(--line);background:#FBF8F1
 }
-
 .placeholder{
 min-height:300px;border:1px dashed rgba(17,17,17,.28);border-radius:26px;
 display:flex;align-items:center;justify-content:center;color:rgba(17,17,17,.38);
@@ -272,7 +269,7 @@ border-top:1px solid var(--line);font-size:14px
 nav{padding:16px 5%}
 .logo-text{display:none}
 .hero{padding-top:125px}
-.hero h1{font-size:4.3rem;letter-spacing:-2px}
+.hero h1{font-size:4rem;letter-spacing:-2px}
 .section-title{letter-spacing:-2px}
 .project-name,.project-info{padding:32px}
 .case-grid{grid-template-columns:1fr}
@@ -286,10 +283,17 @@ footer{flex-direction:column;gap:12px}
 
 <nav>
 <a href="#" class="logo">
-<div class="logo-mark"><span class="dot"></span></div>
+<div class="logo-mark">
+<svg class="gm-symbol" viewBox="0 0 80 80" aria-hidden="true">
+<path class="shape-1" d="M39 10C24 10 12 22 12 38c0 16 12 29 29 29 10 0 18-4 23-10V42H42v12h9c-3 4-7 6-12 6-11 0-19-9-19-21s8-21 19-21c7 0 12 3 16 8l7-7C56 13 48 10 39 10z"/>
+<path class="shape-2" d="M44 30h9l8 13 8-13h9v38h-9V45L61 58h-1L52 45v23h-8V30z"/>
+<circle class="shape-4" cx="59" cy="18" r="7"/>
+<rect class="shape-3" x="15" y="60" width="22" height="8" rx="4"/>
+</svg>
+</div>
 <div class="logo-text">
 <span>Visual Systems</span>
-<span>George Marte</span>
+<span>GM Studio</span>
 </div>
 </a>
 
@@ -303,8 +307,8 @@ footer{flex-direction:column;gap:12px}
 <header class="hero">
 <div class="hero-inner">
 <div class="hero-label"><span></span> Graphic Designer / Aspiring Art Director</div>
-<h1>Design systems with personality.</h1>
-<p class="hero-copy">I create brand identities, packaging, posters, campaign concepts, and visual systems shaped by culture, music, humor, movement, and strong art direction.</p>
+<h1>Building brands that people remember.</h1>
+<p class="hero-copy">Graphic designer and aspiring art director creating visual identities, packaging systems, campaigns, and culture-driven experiences.</p>
 
 <div class="hero-meta">
 <div class="pill">Branding</div>
@@ -317,6 +321,12 @@ footer{flex-direction:column;gap:12px}
 <div class="cta">
 <a href="#work" class="btn btn-dark">View Work</a>
 <a href="mailto:martedgeorge@gmail.com" class="btn btn-light">Email Me</a>
+</div>
+
+<div class="featured-project">
+<span>Featured Project</span>
+<h3>Overload</h3>
+<p>Caffeinated Chaos</p>
 </div>
 </div>
 </header>
@@ -550,7 +560,7 @@ I’m interested in work that feels visual, cultural, expressive, and built arou
 </section>
 
 <footer>
-<span>© 2026 George Marte</span>
+<span>© 2026</span>
 <span>Graphic Design / Art Direction / Branding / Culture</span>
 </footer>
 
