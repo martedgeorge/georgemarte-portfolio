@@ -1,216 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>George Marte | Graphic Designer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-background:#0a0a0a;
-color:white;
-font-family:'Space Grotesk',sans-serif;
-overflow-x:hidden;
-}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#050505;color:#f4f1e8;font-family:'Space Grotesk',sans-serif;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
 
 nav{
-position:fixed;
-top:0;
-width:100%;
-padding:24px 5%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(10,10,10,.85);
-backdrop-filter:blur(20px);
-z-index:999;
-border-bottom:1px solid rgba(255,255,255,.08);
+position:fixed;top:0;left:0;width:100%;z-index:999;
+padding:22px 5%;display:flex;justify-content:space-between;align-items:center;
+background:rgba(5,5,5,.82);backdrop-filter:blur(18px);
+border-bottom:1px solid rgba(255,255,255,.08)
 }
 
 .logo{
-font-size:28px;
-font-weight:700;
-line-height:.9;
-color:#fff;
+font-family:'Anton',sans-serif;font-size:30px;line-height:.85;letter-spacing:1px;
+background:#ff4d00;color:#050505;padding:10px 14px;transform:rotate(-3deg);
+box-shadow:8px 8px 0 #c0ff2e
 }
 
-.nav-links{
-display:flex;
-gap:30px;
-}
-
-.nav-links a{
-color:white;
-text-decoration:none;
-font-weight:500;
-}
+.nav-links{display:flex;gap:28px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px}
+.nav-links a:hover{color:#ff4d00}
 
 .hero{
-min-height:100vh;
-display:flex;
-align-items:center;
-padding:0 6%;
-position:relative;
+min-height:100vh;padding:140px 6% 80px;display:grid;align-items:end;position:relative;
+background:
+radial-gradient(circle at 80% 20%,rgba(255,77,0,.35),transparent 30%),
+radial-gradient(circle at 20% 50%,rgba(192,255,46,.18),transparent 28%),
+#050505;
+}
+
+.tag{
+display:inline-block;background:#c0ff2e;color:#050505;padding:10px 16px;border-radius:999px;
+font-weight:900;text-transform:uppercase;letter-spacing:2px;transform:rotate(4deg);margin-bottom:25px
 }
 
 .hero h1{
-font-size:clamp(5rem,12vw,12rem);
-line-height:.85;
-font-weight:700;
-letter-spacing:-6px;
+font-family:'Anton',sans-serif;font-size:clamp(5.5rem,17vw,18rem);
+line-height:.78;letter-spacing:-3px;text-transform:uppercase
 }
 
-.hero p{
-margin-top:25px;
-max-width:700px;
-font-size:1.2rem;
-color:#bfbfbf;
-}
+.hero p{max-width:680px;font-size:1.25rem;color:#cfcfcf;line-height:1.5;margin-top:30px}
 
-.orange{
-color:#ff5a1f;
-}
+.cta{margin-top:38px;display:flex;gap:16px;flex-wrap:wrap}
+.btn{padding:16px 24px;border-radius:999px;font-weight:900;text-transform:uppercase;letter-spacing:1px}
+.btn-orange{background:#ff4d00;color:#050505}
+.btn-outline{border:1px solid rgba(255,255,255,.25);color:white}
 
-.hero-btn{
-margin-top:40px;
-display:inline-block;
-padding:16px 28px;
-background:#ff5a1f;
-color:black;
-text-decoration:none;
-border-radius:999px;
-font-weight:700;
-}
+.marquee{overflow:hidden;background:#ff4d00;color:#050505;border-top:2px solid #050505;border-bottom:2px solid #050505}
+.marquee div{white-space:nowrap;font-family:'Anton';font-size:42px;padding:18px 0;animation:scroll 18s linear infinite}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-.section{
-padding:120px 6%;
-}
-
-.section-title{
-font-size:4rem;
-margin-bottom:60px;
-letter-spacing:-2px;
-}
+section{padding:110px 6%}
+.section-kicker{color:#ff4d00;font-weight:900;text-transform:uppercase;letter-spacing:3px;font-size:12px;margin-bottom:18px}
+.section-title{font-family:'Anton';font-size:clamp(4rem,10vw,10rem);line-height:.82;text-transform:uppercase;margin-bottom:60px}
 
 .project{
-margin-bottom:120px;
-border:1px solid rgba(255,255,255,.08);
-border-radius:30px;
-overflow:hidden;
-background:#111;
+margin-bottom:120px;border:1px solid rgba(255,255,255,.12);border-radius:34px;overflow:hidden;
+background:#101010
 }
 
-.project-header{
-padding:60px;
+.project-hero{
+min-height:70vh;display:grid;grid-template-columns:1fr 1fr
 }
 
-.project-number{
-color:#ff5a1f;
-font-size:.8rem;
-margin-bottom:20px;
+.project-name{
+padding:50px;display:flex;flex-direction:column;justify-content:space-between;color:#050505
 }
 
-.project-title{
-font-size:clamp(3rem,7vw,7rem);
-line-height:.9;
+.project-name span{font-weight:900;letter-spacing:3px}
+.project-name h2{font-family:'Anton';font-size:clamp(4rem,9vw,11rem);line-height:.78;text-transform:uppercase}
+.project-name p{font-size:1.6rem;font-weight:900;max-width:450px}
+
+.project-info{padding:50px;display:flex;flex-direction:column;justify-content:center}
+.project-info .type{color:#ff4d00;font-weight:900;text-transform:uppercase;letter-spacing:2px;font-size:12px;margin-bottom:30px}
+.project-info h3{font-size:2rem;margin-bottom:14px}
+.project-info p{color:#c9c9c9;line-height:1.55;font-size:1.05rem;margin-bottom:26px}
+
+.case-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px}
+.case-card{background:#050505;border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:20px}
+.case-card small{color:#ff4d00;font-weight:900;text-transform:uppercase;letter-spacing:2px}
+.case-card strong{display:block;margin-top:8px}
+
+.image-zone{
+display:grid;grid-template-columns:2fr 1fr 1fr;gap:18px;padding:35px;border-top:1px solid rgba(255,255,255,.1)
 }
 
-.project-subtitle{
-margin-top:20px;
-font-size:1.4rem;
-color:#ccc;
+.placeholder{
+min-height:300px;border:1px dashed rgba(255,255,255,.25);border-radius:24px;
+display:flex;align-items:center;justify-content:center;color:#777;font-weight:900;text-transform:uppercase;text-align:center;padding:20px
 }
+.placeholder.large{min-height:420px}
 
-.project-body{
-padding:60px;
-border-top:1px solid rgba(255,255,255,.08);
-}
+.orange{background:#ff4d00}
+.green{background:#c0ff2e}
+.pink{background:#ff2e88;color:white}
+.blue{background:#2563eb;color:white}
+.purple{background:#7c3aed;color:white}
+.yellow{background:#ffd000}
 
-.project-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
-margin-top:40px;
-}
-
-.mockup{
-height:280px;
-background:#1b1b1b;
-border-radius:20px;
-display:flex;
-align-items:center;
-justify-content:center;
-color:#666;
-font-size:.9rem;
-}
-
-.skills{
-display:flex;
-flex-wrap:wrap;
-gap:15px;
-margin-top:30px;
-}
-
-.skill{
-padding:12px 18px;
-background:#151515;
-border-radius:999px;
-border:1px solid rgba(255,255,255,.08);
-}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:60px;border-top:1px solid rgba(255,255,255,.1)}
+.about p{font-size:1.25rem;line-height:1.6;color:#cfcfcf}
+.skills{display:flex;flex-wrap:wrap;gap:12px;margin-top:35px}
+.skill{padding:12px 16px;border-radius:999px;background:#141414;border:1px solid rgba(255,255,255,.1);font-weight:700}
 
 .contact{
-background:#ff5a1f;
-padding:100px 6%;
-color:black;
+background:#ff4d00;color:#050505;margin:80px 6%;border-radius:40px;padding:70px
 }
+.contact h2{font-family:'Anton';font-size:clamp(4rem,10vw,10rem);line-height:.82;text-transform:uppercase}
+.contact a{display:inline-block;margin-top:28px;margin-right:14px;background:#050505;color:white;padding:16px 22px;border-radius:999px;font-weight:900}
 
-.contact h2{
-font-size:5rem;
-line-height:.9;
-margin-bottom:30px;
-}
-
-.contact a{
-display:block;
-margin-top:15px;
-font-size:1.2rem;
-color:black;
-text-decoration:none;
-font-weight:700;
-}
-
-footer{
-padding:40px 6%;
-color:#777;
-}
+footer{padding:40px 6%;color:#777;display:flex;justify-content:space-between;border-top:1px solid rgba(255,255,255,.1)}
 
 @media(max-width:900px){
-
-.project-grid{
-grid-template-columns:1fr;
-}
-
-.hero h1{
-font-size:5rem;
-}
-
-.contact h2{
-font-size:3rem;
-}
-
+.nav-links{display:none}
+.project-hero,.about{grid-template-columns:1fr}
+.case-grid{grid-template-columns:1fr 1fr}
+.image-zone{grid-template-columns:1fr}
+.hero h1{font-size:5.5rem}
+footer{flex-direction:column;gap:12px}
 }
 </style>
 </head>
@@ -218,10 +133,7 @@ font-size:3rem;
 <body>
 
 <nav>
-<div class="logo">
-GEORGE<br>MARTE
-</div>
-
+<a href="#"><div class="logo">GEORGE<br>MARTE</div></a>
 <div class="nav-links">
 <a href="#work">Work</a>
 <a href="#about">About</a>
@@ -229,198 +141,234 @@ GEORGE<br>MARTE
 </div>
 </nav>
 
-<section class="hero">
-
+<header class="hero">
 <div>
-<h1>
-WORK FIRST.<br>
-<span class="orange">NOISE SECOND.</span>
-</h1>
-
-<p>
-Graphic Designer & Aspiring Art Director creating branding,
-packaging, campaign concepts, posters and visual systems
-inspired by culture, music and streetwear.
-</p>
-
-<a href="#work" class="hero-btn">View Work</a>
+<div class="tag">Graphic Designer / Aspiring Art Director</div>
+<h1>George<br>Marte</h1>
+<p>Brand identities, packaging, posters, campaign concepts, and visual systems with streetwear energy, culture-first thinking, and bold art direction.</p>
+<div class="cta">
+<a href="#work" class="btn btn-orange">View Work</a>
+<a href="mailto:martedgeorge@gmail.com" class="btn btn-outline">Email Me</a>
 </div>
+</div>
+</header>
+
+<div class="marquee">
+<div>BRANDING ✦ PACKAGING ✦ POSTERS ✦ CAMPAIGNS ✦ CULTURE ✦ ART DIRECTION ✦ BRANDING ✦ PACKAGING ✦ POSTERS ✦ CAMPAIGNS ✦ CULTURE ✦ ART DIRECTION ✦</div>
+</div>
+
+<section id="work">
+<div class="section-kicker">Selected Work</div>
+<h1 class="section-title">Projects<br>With Bite</h1>
+
+<!-- OVERLOAD -->
+<article class="project">
+<div class="project-hero">
+<div class="project-name orange">
+<span>01 / BRANDING / PACKAGING</span>
+<h2>Overload</h2>
+<p>Caffeinated Chaos</p>
+</div>
+<div class="project-info">
+<div class="type">Energy Drink Brand Concept</div>
+<h3>Overview</h3>
+<p>A conceptual energy drink brand built around intensity, speed, action sports, and controlled chaos.</p>
+<h3>Concept</h3>
+<p>The system uses caution-inspired graphics, aggressive contrast, bold packaging, and skate-culture energy to make the brand feel fast, loud, and shelf-ready.</p>
+<div class="case-grid">
+<div class="case-card"><small>Step 01</small><strong>Research</strong></div>
+<div class="case-card"><small>Step 02</small><strong>Identity</strong></div>
+<div class="case-card"><small>Step 03</small><strong>Packaging</strong></div>
+<div class="case-card"><small>Step 04</small><strong>Campaign</strong></div>
+</div>
+</div>
+</div>
+<div class="image-zone">
+<div class="placeholder large">Overload Hero Mockup</div>
+<div class="placeholder">Can Design</div>
+<div class="placeholder">Box / Skate Deck</div>
+</div>
+</article>
+
+<!-- LOST FOUND -->
+<article class="project">
+<div class="project-hero">
+<div class="project-name purple">
+<span>02 / FESTIVAL IDENTITY</span>
+<h2>Lost & Found</h2>
+<p>Mapping Memory Through Music</p>
+</div>
+<div class="project-info">
+<div class="type">Festival Branding / Poster Design</div>
+<h3>Overview</h3>
+<p>A festival identity built around nostalgia, discovery, city movement, and the emotional pull of finding something unexpected.</p>
+<h3>Concept</h3>
+<p>The visual direction uses layered type, movement, map-inspired graphics, and discovery-based storytelling to create a memorable festival world.</p>
+<div class="case-grid">
+<div class="case-card"><small>Step 01</small><strong>Concept</strong></div>
+<div class="case-card"><small>Step 02</small><strong>Typography</strong></div>
+<div class="case-card"><small>Step 03</small><strong>Poster System</strong></div>
+<div class="case-card"><small>Step 04</small><strong>Applications</strong></div>
+</div>
+</div>
+</div>
+<div class="image-zone">
+<div class="placeholder large">Lost & Found Hero Poster</div>
+<div class="placeholder">Festival Pass</div>
+<div class="placeholder">Poster Series</div>
+</div>
+</article>
+
+<!-- NIGHT SHIFT -->
+<article class="project">
+<div class="project-hero">
+<div class="project-name green">
+<span>03 / BEER BRANDING</span>
+<h2>Night Shift</h2>
+<p>Brewed For The Late Hours</p>
+</div>
+<div class="project-info">
+<div class="type">Beer Branding / Packaging</div>
+<h3>Overview</h3>
+<p>A beer branding system inspired by late-night energy, gritty textures, nightlife, and expressive packaging.</p>
+<h3>Concept</h3>
+<p>The brand captures the feeling of after-hours culture through bold labels, dark contrast, rough texture, and high-energy visual language.</p>
+<div class="case-grid">
+<div class="case-card"><small>Step 01</small><strong>Moodboard</strong></div>
+<div class="case-card"><small>Step 02</small><strong>Logo</strong></div>
+<div class="case-card"><small>Step 03</small><strong>Packaging</strong></div>
+<div class="case-card"><small>Step 04</small><strong>Mockups</strong></div>
+</div>
+</div>
+</div>
+<div class="image-zone">
+<div class="placeholder large">Night Shift Packaging</div>
+<div class="placeholder">Label System</div>
+<div class="placeholder">Beer Mockup</div>
+</div>
+</article>
+
+<!-- ART CLUB -->
+<article class="project">
+<div class="project-hero">
+<div class="project-name pink">
+<span>04 / EXPERIMENTAL GRAPHICS</span>
+<h2>Art Club</h2>
+<p>A Creative Playground</p>
+</div>
+<div class="project-info">
+<div class="type">Poster Design / Identity</div>
+<h3>Overview</h3>
+<p>A playful visual identity centered around childhood imagination, expressive shapes, creativity, and hands-on art making.</p>
+<h3>Concept</h3>
+<p>The project uses bold shape language, loose compositions, bright color, and friendly typography to make art feel accessible and fun.</p>
+<div class="case-grid">
+<div class="case-card"><small>Step 01</small><strong>Research</strong></div>
+<div class="case-card"><small>Step 02</small><strong>Shapes</strong></div>
+<div class="case-card"><small>Step 03</small><strong>Posters</strong></div>
+<div class="case-card"><small>Step 04</small><strong>System</strong></div>
+</div>
+</div>
+</div>
+<div class="image-zone">
+<div class="placeholder large">Art Club Poster</div>
+<div class="placeholder">Shape System</div>
+<div class="placeholder">Applications</div>
+</div>
+</article>
+
+<!-- NIKE -->
+<article class="project">
+<div class="project-hero">
+<div class="project-name blue">
+<span>05 / CAMPAIGN CONCEPT</span>
+<h2>Nike</h2>
+<p>I’m Lovin’ Every Step</p>
+</div>
+<div class="project-info">
+<div class="type">Nike x McDonald's Concept</div>
+<h3>Overview</h3>
+<p>A playful campaign concept exploring sneaker culture, movement, fast-food nostalgia, and unexpected brand crossover.</p>
+<h3>Concept</h3>
+<p>The project uses pop-culture familiarity and athletic energy to create a collaboration that feels bold, fun, and instantly recognizable.</p>
+<div class="case-grid">
+<div class="case-card"><small>Step 01</small><strong>Insight</strong></div>
+<div class="case-card"><small>Step 02</small><strong>Campaign Idea</strong></div>
+<div class="case-card"><small>Step 03</small><strong>Art Direction</strong></div>
+<div class="case-card"><small>Step 04</small><strong>Mockups</strong></div>
+</div>
+</div>
+</div>
+<div class="image-zone">
+<div class="placeholder large">Nike Campaign Hero</div>
+<div class="placeholder">Sneaker Mockup</div>
+<div class="placeholder">Social Rollout</div>
+</div>
+</article>
+
+<!-- FRAT HOUSE -->
+<article class="project">
+<div class="project-hero">
+<div class="project-name yellow">
+<span>06 / BAR BRANDING</span>
+<h2>Frat House</h2>
+<p>College Chaos, Branded</p>
+</div>
+<div class="project-info">
+<div class="type">Logo / Packaging / Social</div>
+<h3>Overview</h3>
+<p>A bar identity built around college party culture, humor, bold typography, and energetic brand applications.</p>
+<h3>Concept</h3>
+<p>The system turns party chaos into a memorable brand world through logos, packaging, drink concepts, menus, and social graphics.</p>
+<div class="case-grid">
+<div class="case-card"><small>Step 01</small><strong>Logo</strong></div>
+<div class="case-card"><small>Step 02</small><strong>Voice</strong></div>
+<div class="case-card"><small>Step 03</small><strong>Packaging</strong></div>
+<div class="case-card"><small>Step 04</small><strong>Social</strong></div>
+</div>
+</div>
+</div>
+<div class="image-zone">
+<div class="placeholder large">Frat House Brand Mockup</div>
+<div class="placeholder">Can / Cup</div>
+<div class="placeholder">Menu / Social</div>
+</div>
+</article>
 
 </section>
 
-<section class="section" id="work">
-
-<h2 class="section-title">Selected Work</h2>
-
-<div class="project">
-<div class="project-header">
-<div class="project-number">01</div>
-<div class="project-title">OVERLOAD</div>
-<div class="project-subtitle">Caffeinated Chaos</div>
+<section id="about" class="about">
+<div>
+<div class="section-kicker">About</div>
+<h1 class="section-title">Design With Personality</h1>
 </div>
-
-<div class="project-body">
-<p>Conceptual energy drink branding built around speed, intensity and controlled chaos.</p>
-<div class="case-details">
-  <div>
-    <h3>Challenge</h3>
-    <p>Explain the design problem, audience, and what the project needed to communicate.</p>
-  </div>
-
-  <div>
-    <h3>Concept</h3>
-    <p>Explain the big idea behind the project and why the visual direction fits.</p>
-  </div>
-
-  <div>
-    <h3>Design System</h3>
-    <p>Break down the typography, color palette, logo direction, packaging, layout, and visual language.</p>
-  </div>
-
-  <div>
-    <h3>Outcome</h3>
-    <p>Explain what the final identity accomplishes and why it feels memorable.</p>
-  </div>
-</div>
-<div class="project-grid">
-<div class="mockup">UPLOAD OVERLOAD MOCKUP</div>
-<div class="mockup">UPLOAD OVERLOAD MOCKUP</div>
-<div class="mockup">UPLOAD OVERLOAD MOCKUP</div>
-</div>
-</div>
-</div>
-
-<div class="project">
-<div class="project-header">
-<div class="project-number">02</div>
-<div class="project-title">LOST & FOUND</div>
-<div class="project-subtitle">Mapping Memory Through Music</div>
-</div>
-
-<div class="project-body">
-<p>Festival identity built around nostalgia, discovery and city culture.</p>
-
-<div class="project-grid">
-<div class="mockup">UPLOAD PROJECT</div>
-<div class="mockup">UPLOAD PROJECT</div>
-<div class="mockup">UPLOAD PROJECT</div>
-</div>
-</div>
-</div>
-
-<div class="project">
-<div class="project-header">
-<div class="project-number">03</div>
-<div class="project-title">NIGHT SHIFT</div>
-<div class="project-subtitle">Brewed For The Late Hours</div>
-</div>
-
-<div class="project-body">
-<p>Beer branding system inspired by nightlife, energy and grit.</p>
-
-<div class="project-grid">
-<div class="mockup">UPLOAD PROJECT</div>
-<div class="mockup">UPLOAD PROJECT</div>
-<div class="mockup">UPLOAD PROJECT</div>
-</div>
-</div>
-</div>
-
-<div class="project">
-<div class="project-header">
-<div class="project-number">04</div>
-<div class="project-title">ART CLUB</div>
-<div class="project-subtitle">Creative Playground</div>
-</div>
-
-<div class="project-body">
-<p>Playful visual identity built around childhood imagination.</p>
-
-<div class="project-grid">
-<div class="mockup">UPLOAD PROJECT</div>
-<div class="mockup">UPLOAD PROJECT</div>
-<div class="mockup">UPLOAD PROJECT</div>
-</div>
-</div>
-</div>
-
-<div class="project">
-<div class="project-header">
-<div class="project-number">05</div>
-<div class="project-title">NIKE</div>
-<div class="project-subtitle">I'm Lovin' Every Step</div>
-</div>
-
-<div class="project-body">
-<p>Campaign concept exploring movement, food culture and nostalgia.</p>
-
-<div class="project-grid">
-<div class="mockup">UPLOAD PROJECT</div>
-<div class="mockup">UPLOAD PROJECT</div>
-<div class="mockup">UPLOAD PROJECT</div>
-</div>
-</div>
-</div>
-
-<div class="project">
-<div class="project-header">
-<div class="project-number">06</div>
-<div class="project-title">FRAT HOUSE</div>
-<div class="project-subtitle">College Chaos Branded</div>
-</div>
-
-<div class="project-body">
-<p>Bar branding system built around college culture and energy.</p>
-
-<div class="project-grid">
-<div class="mockup">UPLOAD PROJECT</div>
-<div class="mockup">UPLOAD PROJECT</div>
-<div class="mockup">UPLOAD PROJECT</div>
-</div>
-</div>
-</div>
-
-</section>
-
-<section class="section" id="about">
-
-<h2 class="section-title">About Me</h2>
-
-<p style="max-width:800px;font-size:1.2rem;color:#bbb;">
-I'm George Marte, a graphic designer and aspiring art director focused on branding,
-packaging, campaigns, typography and visual storytelling. My work blends culture,
-music, streetwear and bold visual systems to create memorable design experiences.
-</p>
-
+<div>
+<p>I’m George Marte, a graphic designer and aspiring art director focused on branding, packaging, poster design, campaign concepts, and visual systems. My work blends bold visuals, storytelling, and cultural references to create design that feels intentional, memorable, and full of personality.</p>
 <div class="skills">
-<div class="skill">Branding</div>
-<div class="skill">Art Direction</div>
-<div class="skill">Packaging</div>
-<div class="skill">Typography</div>
-<div class="skill">Poster Design</div>
-<div class="skill">Adobe Creative Suite</div>
-<div class="skill">Figma</div>
-<div class="skill">Motion Design</div>
+<span class="skill">Branding</span>
+<span class="skill">Art Direction</span>
+<span class="skill">Packaging</span>
+<span class="skill">Poster Design</span>
+<span class="skill">Campaign Concepts</span>
+<span class="skill">Typography</span>
+<span class="skill">Logo Design</span>
+<span class="skill">Social Content</span>
+<span class="skill">Adobe Creative Suite</span>
+<span class="skill">Figma</span>
+<span class="skill">Procreate</span>
 </div>
-
+</div>
 </section>
 
-<section class="contact" id="contact">
-
-<h2>Let's Create<br>Something Great.</h2>
-
-<a href="mailto:martedgeorge@gmail.com">
-martedgeorge@gmail.com
-</a>
-
-<a href="https://instagram.com/kiddi3go" target="_blank">
-@kiddi3go
-</a>
-
+<section id="contact" class="contact">
+<h2>Let’s Make<br>Something Worth<br>Looking At.</h2>
+<a href="mailto:martedgeorge@gmail.com">martedgeorge@gmail.com</a>
+<a href="https://instagram.com/kiddi3go" target="_blank">@kiddi3go</a>
 </section>
 
 <footer>
-© 2026 George Marte
+<span>© 2026 George Marte</span>
+<span>Graphic Design / Art Direction / Branding / Culture</span>
 </footer>
 
 </body>
