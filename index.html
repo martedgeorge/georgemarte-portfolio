@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>George Marte | Graphic Designer</title>
+<title>George Marte | Graphic Designer & Aspiring Art Director</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 
@@ -15,16 +15,25 @@ a{text-decoration:none;color:inherit}
 
 nav{
 position:fixed;top:0;left:0;width:100%;z-index:999;
-padding:22px 5%;display:flex;justify-content:space-between;align-items:center;
-background:rgba(5,5,5,.82);backdrop-filter:blur(18px);
+padding:20px 5%;display:flex;justify-content:space-between;align-items:center;
+background:rgba(5,5,5,.86);backdrop-filter:blur(18px);
 border-bottom:1px solid rgba(255,255,255,.08)
 }
 
 .logo{
-font-family:'Anton',sans-serif;font-size:30px;line-height:.85;letter-spacing:1px;
-background:#ff4d00;color:#050505;padding:10px 14px;transform:rotate(-3deg);
-box-shadow:8px 8px 0 #c0ff2e
+display:flex;align-items:center;gap:12px
 }
+.logo-mark{
+width:54px;height:54px;background:#ff4d00;color:#050505;border-radius:14px;
+display:flex;align-items:center;justify-content:center;
+font-family:'Anton',sans-serif;font-size:28px;letter-spacing:0;
+transform:rotate(-5deg);box-shadow:7px 7px 0 #c0ff2e
+}
+.logo-text{
+display:flex;flex-direction:column;text-transform:uppercase;line-height:1
+}
+.logo-text span:first-child{font-size:12px;letter-spacing:3px;color:#c0ff2e;font-weight:900}
+.logo-text span:last-child{font-size:18px;letter-spacing:1px;font-weight:900}
 
 .nav-links{display:flex;gap:28px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px}
 .nav-links a:hover{color:#ff4d00}
@@ -33,21 +42,21 @@ box-shadow:8px 8px 0 #c0ff2e
 min-height:100vh;padding:140px 6% 80px;display:grid;align-items:end;position:relative;
 background:
 radial-gradient(circle at 80% 20%,rgba(255,77,0,.35),transparent 30%),
-radial-gradient(circle at 20% 50%,rgba(192,255,46,.18),transparent 28%),
+radial-gradient(circle at 20% 50%,rgba(192,255,46,.16),transparent 28%),
 #050505;
 }
 
 .tag{
 display:inline-block;background:#c0ff2e;color:#050505;padding:10px 16px;border-radius:999px;
-font-weight:900;text-transform:uppercase;letter-spacing:2px;transform:rotate(4deg);margin-bottom:25px
+font-weight:900;text-transform:uppercase;letter-spacing:2px;transform:rotate(3deg);margin-bottom:28px
 }
 
 .hero h1{
-font-family:'Anton',sans-serif;font-size:clamp(5.5rem,17vw,18rem);
-line-height:.78;letter-spacing:-3px;text-transform:uppercase
+font-family:'Anton',sans-serif;font-size:clamp(5rem,14vw,15rem);
+line-height:.9;letter-spacing:-2px;text-transform:uppercase;max-width:1100px
 }
 
-.hero p{max-width:680px;font-size:1.25rem;color:#cfcfcf;line-height:1.5;margin-top:30px}
+.hero p{max-width:760px;font-size:1.25rem;color:#cfcfcf;line-height:1.5;margin-top:30px}
 
 .cta{margin-top:38px;display:flex;gap:16px;flex-wrap:wrap}
 .btn{padding:16px 24px;border-radius:999px;font-weight:900;text-transform:uppercase;letter-spacing:1px}
@@ -60,34 +69,34 @@ line-height:.78;letter-spacing:-3px;text-transform:uppercase
 
 section{padding:110px 6%}
 .section-kicker{color:#ff4d00;font-weight:900;text-transform:uppercase;letter-spacing:3px;font-size:12px;margin-bottom:18px}
-.section-title{font-family:'Anton';font-size:clamp(4rem,10vw,10rem);line-height:.82;text-transform:uppercase;margin-bottom:60px}
+.section-title{font-family:'Anton';font-size:clamp(4rem,9vw,9rem);line-height:.9;text-transform:uppercase;margin-bottom:60px}
 
 .project{
 margin-bottom:120px;border:1px solid rgba(255,255,255,.12);border-radius:34px;overflow:hidden;
 background:#101010
 }
 
-.project-hero{
-min-height:70vh;display:grid;grid-template-columns:1fr 1fr
-}
+.project-hero{min-height:70vh;display:grid;grid-template-columns:.9fr 1.1fr}
 
 .project-name{
 padding:50px;display:flex;flex-direction:column;justify-content:space-between;color:#050505
 }
-
 .project-name span{font-weight:900;letter-spacing:3px}
-.project-name h2{font-family:'Anton';font-size:clamp(4rem,9vw,11rem);line-height:.78;text-transform:uppercase}
-.project-name p{font-size:1.6rem;font-weight:900;max-width:450px}
+.project-name h2{
+font-family:'Anton';font-size:clamp(3.6rem,7.5vw,9rem);
+line-height:.92;letter-spacing:-1px;text-transform:uppercase
+}
+.project-name p{font-size:1.6rem;font-weight:900;max-width:460px}
 
 .project-info{padding:50px;display:flex;flex-direction:column;justify-content:center}
 .project-info .type{color:#ff4d00;font-weight:900;text-transform:uppercase;letter-spacing:2px;font-size:12px;margin-bottom:30px}
-.project-info h3{font-size:2rem;margin-bottom:14px}
-.project-info p{color:#c9c9c9;line-height:1.55;font-size:1.05rem;margin-bottom:26px}
+.project-info h3{font-size:2rem;margin:26px 0 14px}
+.project-info p{color:#c9c9c9;line-height:1.55;font-size:1.05rem;margin-bottom:18px}
 
-.case-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px}
+.case-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:34px}
 .case-card{background:#050505;border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:20px}
 .case-card small{color:#ff4d00;font-weight:900;text-transform:uppercase;letter-spacing:2px}
-.case-card strong{display:block;margin-top:8px}
+.case-card strong{display:block;margin-top:10px;font-size:.92rem;line-height:1.4;color:#f4f1e8}
 
 .image-zone{
 display:grid;grid-template-columns:2fr 1fr 1fr;gap:18px;padding:35px;border-top:1px solid rgba(255,255,255,.1)
@@ -114,7 +123,7 @@ display:flex;align-items:center;justify-content:center;color:#777;font-weight:90
 .contact{
 background:#ff4d00;color:#050505;margin:80px 6%;border-radius:40px;padding:70px
 }
-.contact h2{font-family:'Anton';font-size:clamp(4rem,10vw,10rem);line-height:.82;text-transform:uppercase}
+.contact h2{font-family:'Anton';font-size:clamp(4rem,9vw,9rem);line-height:.9;text-transform:uppercase}
 .contact a{display:inline-block;margin-top:28px;margin-right:14px;background:#050505;color:white;padding:16px 22px;border-radius:999px;font-weight:900}
 
 footer{padding:40px 6%;color:#777;display:flex;justify-content:space-between;border-top:1px solid rgba(255,255,255,.1)}
@@ -122,9 +131,10 @@ footer{padding:40px 6%;color:#777;display:flex;justify-content:space-between;bor
 @media(max-width:900px){
 .nav-links{display:none}
 .project-hero,.about{grid-template-columns:1fr}
-.case-grid{grid-template-columns:1fr 1fr}
+.case-grid{grid-template-columns:1fr}
 .image-zone{grid-template-columns:1fr}
-.hero h1{font-size:5.5rem}
+.hero h1{font-size:5rem;letter-spacing:-1px}
+.project-name h2{font-size:4rem}
 footer{flex-direction:column;gap:12px}
 }
 </style>
@@ -133,7 +143,14 @@ footer{flex-direction:column;gap:12px}
 <body>
 
 <nav>
-<a href="#"><div class="logo">GEORGE<br>MARTE</div></a>
+<a href="#" class="logo">
+<div class="logo-mark">GM</div>
+<div class="logo-text">
+<span>George</span>
+<span>Marte</span>
+</div>
+</a>
+
 <div class="nav-links">
 <a href="#work">Work</a>
 <a href="#about">About</a>
@@ -165,57 +182,61 @@ footer{flex-direction:column;gap:12px}
 <article class="project">
 <div class="project-hero">
 <div class="project-name orange">
-<span>01 / BRANDING / PACKAGING</span>
+<span>01 / BRANDING / PACKAGING DESIGN</span>
 <h2>Overload</h2>
 <p>Caffeinated Chaos</p>
 </div>
 <div class="project-info">
 <div class="type">Energy Drink Brand Concept</div>
 <h3>Overview</h3>
-<p>A conceptual energy drink brand built around intensity, speed, action sports, and controlled chaos.</p>
-<h3>Concept</h3>
-<p>The system uses caution-inspired graphics, aggressive contrast, bold packaging, and skate-culture energy to make the brand feel fast, loud, and shelf-ready.</p>
+<p>Overload is a conceptual energy drink brand built around high intensity, speed, and controlled chaos. Inspired by action sports culture, the brand combines bold minimal design with aggressive visual elements to create something that feels fast, raw, and built for movement.</p>
+<h3>Creative Direction</h3>
+<p>The visual identity combines punk-inspired typography, high-contrast packaging, and caution-tape graphics to create a brand that feels explosive and rebellious while still remaining clean and modern.</p>
+<h3>Visual System</h3>
+<p>The matte black can design contrasts against sharp red accents and warning-inspired visuals, reinforcing the idea of high energy and overstimulation. Subtle sparks and industrial textures build an aggressive, fast-paced atmosphere without overwhelming the composition.</p>
 <div class="case-grid">
-<div class="case-card"><small>Step 01</small><strong>Research</strong></div>
-<div class="case-card"><small>Step 02</small><strong>Identity</strong></div>
-<div class="case-card"><small>Step 03</small><strong>Packaging</strong></div>
-<div class="case-card"><small>Step 04</small><strong>Campaign</strong></div>
+<div class="case-card"><small>Can</small><strong>Sleek high-contrast can design focused on strong shelf impact.</strong></div>
+<div class="case-card"><small>Box</small><strong>Packaging system extending the brand beyond the can.</strong></div>
+<div class="case-card"><small>Skate Deck</small><strong>Lifestyle extension inspired by skate and extreme sports culture.</strong></div>
+<div class="case-card"><small>Campaign</small><strong>Adaptable system for social, merch, packaging, and promotion.</strong></div>
 </div>
 </div>
 </div>
 <div class="image-zone">
-<div class="placeholder large">Overload Hero Mockup</div>
-<div class="placeholder">Can Design</div>
-<div class="placeholder">Box / Skate Deck</div>
+<div class="placeholder large">Overload Can Mockup</div>
+<div class="placeholder">Box Packaging</div>
+<div class="placeholder">Skate Deck</div>
 </div>
 </article>
 
-<!-- LOST FOUND -->
+<!-- LOST & FOUND -->
 <article class="project">
 <div class="project-hero">
 <div class="project-name purple">
-<span>02 / FESTIVAL IDENTITY</span>
+<span>02 / VISUAL IDENTITY / EVENT BRANDING</span>
 <h2>Lost & Found</h2>
 <p>Mapping Memory Through Music</p>
 </div>
 <div class="project-info">
-<div class="type">Festival Branding / Poster Design</div>
+<div class="type">Concept Music Festival</div>
 <h3>Overview</h3>
-<p>A festival identity built around nostalgia, discovery, city movement, and the emotional pull of finding something unexpected.</p>
-<h3>Concept</h3>
-<p>The visual direction uses layered type, movement, map-inspired graphics, and discovery-based storytelling to create a memorable festival world.</p>
+<p>Lost & Found is a conceptual music festival where each day takes place in a different borough of New York City. The project explores how design can reflect location, culture, and identity while remaining connected through a single visual system.</p>
+<h3>Creative Direction</h3>
+<p>Inspired by NYC neighborhoods, transit systems, street culture, and music communities, the identity turns the city itself into part of the experience. Each borough carries its own visual voice while still belonging to a larger festival system.</p>
+<h3>Visual System</h3>
+<p>The visual language combines custom typography, borough-specific color palettes, map-based graphics, and layered urban textures. Structured city layouts are paired with distressed textures to create a balance between precision and chaos.</p>
 <div class="case-grid">
-<div class="case-card"><small>Step 01</small><strong>Concept</strong></div>
-<div class="case-card"><small>Step 02</small><strong>Typography</strong></div>
-<div class="case-card"><small>Step 03</small><strong>Poster System</strong></div>
-<div class="case-card"><small>Step 04</small><strong>Applications</strong></div>
+<div class="case-card"><small>Poster Series</small><strong>Five posters representing the five NYC boroughs as one cohesive system.</strong></div>
+<div class="case-card"><small>Merch</small><strong>T-shirt design translating the borough-based identity into apparel.</strong></div>
+<div class="case-card"><small>Ticket</small><strong>MetroCard-inspired festival pass using subway map language.</strong></div>
+<div class="case-card"><small>Social</small><strong>NYC-inspired social graphics blending nostalgia and music culture.</strong></div>
 </div>
 </div>
 </div>
 <div class="image-zone">
-<div class="placeholder large">Lost & Found Hero Poster</div>
-<div class="placeholder">Festival Pass</div>
-<div class="placeholder">Poster Series</div>
+<div class="placeholder large">Lost & Found Poster Series</div>
+<div class="placeholder">MetroCard Ticket</div>
+<div class="placeholder">Merch / Social</div>
 </div>
 </article>
 
@@ -223,28 +244,30 @@ footer{flex-direction:column;gap:12px}
 <article class="project">
 <div class="project-hero">
 <div class="project-name green">
-<span>03 / BEER BRANDING</span>
+<span>03 / CONCEPT / PACKAGING DESIGN</span>
 <h2>Night Shift</h2>
 <p>Brewed For The Late Hours</p>
 </div>
 <div class="project-info">
-<div class="type">Beer Branding / Packaging</div>
+<div class="type">Concept Beer Brand</div>
 <h3>Overview</h3>
-<p>A beer branding system inspired by late-night energy, gritty textures, nightlife, and expressive packaging.</p>
-<h3>Concept</h3>
-<p>The brand captures the feeling of after-hours culture through bold labels, dark contrast, rough texture, and high-energy visual language.</p>
+<p>Night Shift is a conceptual beer brand inspired by late nights, working-class culture, and gritty environments. The identity focuses on bold, minimal design with a strong visual system across multiple flavors.</p>
+<h3>Creative Direction</h3>
+<p>The brand was designed around endurance, routine, and life after dark. Industrial environments, blue-collar work culture, and late-night city energy shape a system that feels simple, bold, and slightly rough around the edges.</p>
+<h3>Packaging System</h3>
+<p>The three-can system uses consistent structure with flavor-specific variation. The variety pack brings all three flavors together through bold contrast, layered typography, and distressed illustration.</p>
 <div class="case-grid">
-<div class="case-card"><small>Step 01</small><strong>Moodboard</strong></div>
-<div class="case-card"><small>Step 02</small><strong>Logo</strong></div>
-<div class="case-card"><small>Step 03</small><strong>Packaging</strong></div>
-<div class="case-card"><small>Step 04</small><strong>Mockups</strong></div>
+<div class="case-card"><small>Amber Lager</small><strong>Warm caramel notes, crisp finish, and easy late-night drinkability.</strong></div>
+<div class="case-card"><small>Red Ale</small><strong>Rich malt profile, subtle bitterness, and steady balanced rhythm.</strong></div>
+<div class="case-card"><small>Midnight Stout</small><strong>Dark, full-bodied, roasted, intense, and unapologetically bold.</strong></div>
+<div class="case-card"><small>Variety Pack</small><strong>Skeleton hourglass graphic reinforcing time, endurance, and late-night work.</strong></div>
 </div>
 </div>
 </div>
 <div class="image-zone">
-<div class="placeholder large">Night Shift Packaging</div>
-<div class="placeholder">Label System</div>
-<div class="placeholder">Beer Mockup</div>
+<div class="placeholder large">Night Shift Variety Pack</div>
+<div class="placeholder">Can System</div>
+<div class="placeholder">Flavor Details</div>
 </div>
 </article>
 
@@ -252,28 +275,30 @@ footer{flex-direction:column;gap:12px}
 <article class="project">
 <div class="project-hero">
 <div class="project-name pink">
-<span>04 / EXPERIMENTAL GRAPHICS</span>
+<span>04 / VISUAL IDENTITY / EP CAMPAIGN</span>
 <h2>Art Club</h2>
-<p>A Creative Playground</p>
+<p>Crystal Children</p>
 </div>
 <div class="project-info">
-<div class="type">Poster Design / Identity</div>
+<div class="type">Band Identity / EP Campaign</div>
 <h3>Overview</h3>
-<p>A playful visual identity centered around childhood imagination, expressive shapes, creativity, and hands-on art making.</p>
-<h3>Concept</h3>
-<p>The project uses bold shape language, loose compositions, bright color, and friendly typography to make art feel accessible and fun.</p>
+<p>Art Club is a Glasgow-based band blending Jazz, Afrobeat, Electronica, and Soul into a sound that feels both timeless and explosive. The visual identity for their EP Crystal Children reflects that same energy through bold color, abstract illustration, and expressive typography.</p>
+<h3>Creative Direction</h3>
+<p>The project explores a playful but striking visual language inspired by handmade artwork, surreal forms, and experimental music culture. Bright primary colors, organic shapes, and rough textures create something energetic, emotional, and unpredictable.</p>
+<h3>Visual System</h3>
+<p>The logo combines playful typography with handmade illustration, integrating abstract facial features and eye forms. The illustration style uses imperfect textures, hand-drawn elements, and surreal black shapes inspired by dream imagery, collage, and expressive mark-making.</p>
 <div class="case-grid">
-<div class="case-card"><small>Step 01</small><strong>Research</strong></div>
-<div class="case-card"><small>Step 02</small><strong>Shapes</strong></div>
-<div class="case-card"><small>Step 03</small><strong>Posters</strong></div>
-<div class="case-card"><small>Step 04</small><strong>System</strong></div>
+<div class="case-card"><small>Logo</small><strong>Flexible mark combining playful typography and abstract facial forms.</strong></div>
+<div class="case-card"><small>Illustration</small><strong>Surreal eye forms, rough texture, and handmade visual language.</strong></div>
+<div class="case-card"><small>Vinyl</small><strong>Minimal composition with bold black forms and colorful type rhythm.</strong></div>
+<div class="case-card"><small>Merch</small><strong>Streetwear-inspired shirt system using full Crystal Children artwork.</strong></div>
 </div>
 </div>
 </div>
 <div class="image-zone">
-<div class="placeholder large">Art Club Poster</div>
-<div class="placeholder">Shape System</div>
-<div class="placeholder">Applications</div>
+<div class="placeholder large">Crystal Children Vinyl Cover</div>
+<div class="placeholder">Logo System</div>
+<div class="placeholder">Merch Design</div>
 </div>
 </article>
 
@@ -281,28 +306,30 @@ footer{flex-direction:column;gap:12px}
 <article class="project">
 <div class="project-hero">
 <div class="project-name blue">
-<span>05 / CAMPAIGN CONCEPT</span>
-<h2>Nike</h2>
+<span>05 / CONCEPT CAMPAIGN / ART DIRECTION</span>
+<h2>Nike x McDonald’s</h2>
 <p>I’m Lovin’ Every Step</p>
 </div>
 <div class="project-info">
-<div class="type">Nike x McDonald's Concept</div>
+<div class="type">Concept Collaboration Campaign</div>
 <h3>Overview</h3>
-<p>A playful campaign concept exploring sneaker culture, movement, fast-food nostalgia, and unexpected brand crossover.</p>
-<h3>Concept</h3>
-<p>The project uses pop-culture familiarity and athletic energy to create a collaboration that feels bold, fun, and instantly recognizable.</p>
+<p>A conceptual collaboration between Nike and McDonald’s that blends fast food culture with performance and streetwear. The project explores how two global brands can merge through bold visuals, playful design, and cultural crossover.</p>
+<h3>Creative Direction</h3>
+<p>The campaign uses bright color, instantly recognizable food cues, and sneaker culture references to create a collaboration that feels unexpected, playful, and wearable.</p>
+<h3>Campaign System</h3>
+<p>The project expands across posters, a Big Mac-inspired Air Force 1, shoebox packaging modeled after a McDonald’s Big Mac box, streetwear merchandise, and a race car helmet extension that pushes the concept into speed and performance culture.</p>
 <div class="case-grid">
-<div class="case-card"><small>Step 01</small><strong>Insight</strong></div>
-<div class="case-card"><small>Step 02</small><strong>Campaign Idea</strong></div>
-<div class="case-card"><small>Step 03</small><strong>Art Direction</strong></div>
-<div class="case-card"><small>Step 04</small><strong>Mockups</strong></div>
+<div class="case-card"><small>Posters</small><strong>Bold campaign visuals built to feel loud, playful, and recognizable.</strong></div>
+<div class="case-card"><small>Sneaker</small><strong>Air Force 1 concept translating Big Mac colors and textures into materials.</strong></div>
+<div class="case-card"><small>Shoebox</small><strong>Packaging system inspired by McDonald’s Big Mac box structure.</strong></div>
+<div class="case-card"><small>Race Car</small><strong>Performance-focused extension connecting the campaign to speed culture.</strong></div>
 </div>
 </div>
 </div>
 <div class="image-zone">
-<div class="placeholder large">Nike Campaign Hero</div>
-<div class="placeholder">Sneaker Mockup</div>
-<div class="placeholder">Social Rollout</div>
+<div class="placeholder large">Nike x McDonald’s Campaign Hero</div>
+<div class="placeholder">Air Force 1 Concept</div>
+<div class="placeholder">Shoebox / Merch</div>
 </div>
 </article>
 
@@ -310,28 +337,30 @@ footer{flex-direction:column;gap:12px}
 <article class="project">
 <div class="project-hero">
 <div class="project-name yellow">
-<span>06 / BAR BRANDING</span>
+<span>06 / BAR BRANDING / LOGO / PACKAGING</span>
 <h2>Frat House</h2>
 <p>College Chaos, Branded</p>
 </div>
 <div class="project-info">
-<div class="type">Logo / Packaging / Social</div>
+<div class="type">Concept Bar Brand</div>
 <h3>Overview</h3>
-<p>A bar identity built around college party culture, humor, bold typography, and energetic brand applications.</p>
-<h3>Concept</h3>
-<p>The system turns party chaos into a memorable brand world through logos, packaging, drink concepts, menus, and social graphics.</p>
+<p>Frat House is a conceptual bar brand inspired by college party culture, dive bars, and late-night chaos. The project blends streetwear-inspired visuals, mascot branding, and immersive environmental graphics to create a playful nightlife identity.</p>
+<h3>Creative Direction</h3>
+<p>From the custom mascot logo to the door-style drink menu concept, every element was designed to feel energetic, humorous, and authentic to the atmosphere of a real frat-party bar experience.</p>
+<h3>Brand System</h3>
+<p>The logo combines nostalgic college-party culture with a bold cartoon house mascot inspired by vintage beer brands, Y2K skate graphics, and collegiate branding. The drink menu, beer can, and brand extensions translate the same chaotic personality into believable bar touchpoints.</p>
 <div class="case-grid">
-<div class="case-card"><small>Step 01</small><strong>Logo</strong></div>
-<div class="case-card"><small>Step 02</small><strong>Voice</strong></div>
-<div class="case-card"><small>Step 03</small><strong>Packaging</strong></div>
-<div class="case-card"><small>Step 04</small><strong>Social</strong></div>
+<div class="case-card"><small>Logo</small><strong>Playful mascot identity with bright primary colors and expressive character design.</strong></div>
+<div class="case-card"><small>Menu</small><strong>Door-style drink menu with humorous categories and late-night bar energy.</strong></div>
+<div class="case-card"><small>Beer</small><strong>Can packaging using bold typography, illustration, and swirl graphics.</strong></div>
+<div class="case-card"><small>Environment</small><strong>Immersive system built around messy fun and nostalgic party culture.</strong></div>
 </div>
 </div>
 </div>
 <div class="image-zone">
 <div class="placeholder large">Frat House Brand Mockup</div>
-<div class="placeholder">Can / Cup</div>
-<div class="placeholder">Menu / Social</div>
+<div class="placeholder">Drink Menu</div>
+<div class="placeholder">Beer Can</div>
 </div>
 </article>
 
