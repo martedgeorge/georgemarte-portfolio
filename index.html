@@ -5,136 +5,587 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>George Marte | Graphic Designer & Aspiring Art Director</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+:root{
+--bg:#F7F4EE;
+--paper:#FFFDF7;
+--ink:#111111;
+--muted:#5C5C5C;
+--line:rgba(17,17,17,.12);
+
+--clay:#D77A61;
+--lavender:#A59CF0;
+--sage:#B7D3C0;
+--butter:#F3D46A;
+--sky:#A8D7F5;
+--navy:#162033;
+--coral:#EF8F78;
+}
+
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:#050505;color:#f4f1e8;font-family:'Space Grotesk',sans-serif;overflow-x:hidden}
+body{
+background:var(--bg);
+color:var(--ink);
+font-family:'Manrope',sans-serif;
+overflow-x:hidden;
+}
 a{text-decoration:none;color:inherit}
 
 nav{
-position:fixed;top:0;left:0;width:100%;z-index:999;
-padding:20px 5%;display:flex;justify-content:space-between;align-items:center;
-background:rgba(5,5,5,.86);backdrop-filter:blur(18px);
-border-bottom:1px solid rgba(255,255,255,.08)
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:999;
+padding:20px 5%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(247,244,238,.86);
+backdrop-filter:blur(18px);
+border-bottom:1px solid var(--line);
 }
 
 .logo{
-display:flex;align-items:center;gap:12px
+display:flex;
+align-items:center;
+gap:12px;
+font-weight:800;
 }
-.logo-mark{
-width:54px;height:54px;background:#ff4d00;color:#050505;border-radius:14px;
-display:flex;align-items:center;justify-content:center;
-font-family:'Anton',sans-serif;font-size:28px;letter-spacing:0;
-transform:rotate(-5deg);box-shadow:7px 7px 0 #c0ff2e
-}
-.logo-text{
-display:flex;flex-direction:column;text-transform:uppercase;line-height:1
-}
-.logo-text span:first-child{font-size:12px;letter-spacing:3px;color:#c0ff2e;font-weight:900}
-.logo-text span:last-child{font-size:18px;letter-spacing:1px;font-weight:900}
 
-.nav-links{display:flex;gap:28px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px}
-.nav-links a:hover{color:#ff4d00}
+.logo-mark{
+width:52px;
+height:52px;
+position:relative;
+border-radius:18px;
+background:var(--ink);
+transform:rotate(-6deg);
+box-shadow:7px 7px 0 var(--lavender);
+}
+
+.logo-mark:before{
+content:"";
+position:absolute;
+width:22px;
+height:22px;
+border-radius:50%;
+background:var(--butter);
+top:8px;
+left:8px;
+}
+
+.logo-mark:after{
+content:"";
+position:absolute;
+width:22px;
+height:8px;
+border-radius:999px;
+background:var(--clay);
+bottom:11px;
+right:8px;
+transform:rotate(-24deg);
+}
+
+.logo-text{
+display:flex;
+flex-direction:column;
+line-height:1;
+text-transform:uppercase;
+}
+
+.logo-text span:first-child{
+font-size:11px;
+letter-spacing:3px;
+color:var(--muted);
+font-weight:800;
+}
+
+.logo-text span:last-child{
+font-size:17px;
+letter-spacing:1px;
+font-weight:900;
+}
+
+.nav-links{
+display:flex;
+gap:28px;
+font-size:12px;
+font-weight:800;
+text-transform:uppercase;
+letter-spacing:2px;
+color:var(--muted);
+}
+
+.nav-links a:hover{color:var(--clay)}
 
 .hero{
-min-height:100vh;padding:140px 6% 80px;display:grid;align-items:end;position:relative;
-background:
-radial-gradient(circle at 80% 20%,rgba(255,77,0,.35),transparent 30%),
-radial-gradient(circle at 20% 50%,rgba(192,255,46,.16),transparent 28%),
-#050505;
+min-height:100vh;
+padding:150px 6% 90px;
+display:grid;
+align-items:end;
+position:relative;
+overflow:hidden;
 }
 
-.tag{
-display:inline-block;background:#c0ff2e;color:#050505;padding:10px 16px;border-radius:999px;
-font-weight:900;text-transform:uppercase;letter-spacing:2px;transform:rotate(3deg);margin-bottom:28px
+.hero:before{
+content:"";
+position:absolute;
+width:520px;
+height:520px;
+border-radius:50%;
+background:var(--lavender);
+right:-160px;
+top:100px;
+opacity:.35;
+filter:blur(20px);
+}
+
+.hero:after{
+content:"";
+position:absolute;
+width:360px;
+height:360px;
+border-radius:50%;
+background:var(--butter);
+left:-130px;
+bottom:70px;
+opacity:.5;
+filter:blur(12px);
+}
+
+.hero-inner{
+position:relative;
+z-index:2;
+max-width:1280px;
+}
+
+.hero-label{
+display:inline-flex;
+gap:10px;
+align-items:center;
+background:var(--ink);
+color:var(--bg);
+padding:10px 16px;
+border-radius:999px;
+font-size:12px;
+font-weight:900;
+text-transform:uppercase;
+letter-spacing:2px;
+margin-bottom:28px;
+transform:rotate(-2deg);
+}
+
+.hero-label span{
+width:10px;
+height:10px;
+border-radius:50%;
+background:var(--butter);
+display:inline-block;
 }
 
 .hero h1{
-font-family:'Anton',sans-serif;font-size:clamp(5rem,14vw,15rem);
-line-height:.9;letter-spacing:-2px;text-transform:uppercase;max-width:1100px
+font-family:'Syne',sans-serif;
+font-size:clamp(4rem,10vw,11rem);
+line-height:.88;
+letter-spacing:-6px;
+max-width:1180px;
+font-weight:800;
 }
 
-.hero p{max-width:760px;font-size:1.25rem;color:#cfcfcf;line-height:1.5;margin-top:30px}
+.hero-copy{
+margin-top:30px;
+max-width:720px;
+font-size:1.18rem;
+line-height:1.65;
+color:var(--muted);
+}
 
-.cta{margin-top:38px;display:flex;gap:16px;flex-wrap:wrap}
-.btn{padding:16px 24px;border-radius:999px;font-weight:900;text-transform:uppercase;letter-spacing:1px}
-.btn-orange{background:#ff4d00;color:#050505}
-.btn-outline{border:1px solid rgba(255,255,255,.25);color:white}
+.hero-meta{
+margin-top:24px;
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+}
 
-.marquee{overflow:hidden;background:#ff4d00;color:#050505;border-top:2px solid #050505;border-bottom:2px solid #050505}
-.marquee div{white-space:nowrap;font-family:'Anton';font-size:42px;padding:18px 0;animation:scroll 18s linear infinite}
-@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.pill{
+padding:10px 14px;
+border:1px solid var(--line);
+border-radius:999px;
+font-size:13px;
+font-weight:800;
+background:rgba(255,255,255,.45);
+}
+
+.cta{
+margin-top:40px;
+display:flex;
+gap:16px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:15px 23px;
+border-radius:999px;
+font-size:13px;
+font-weight:900;
+text-transform:uppercase;
+letter-spacing:1px;
+transition:.2s ease;
+}
+
+.btn-dark{
+background:var(--ink);
+color:var(--bg);
+}
+
+.btn-dark:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 0 var(--lavender);
+}
+
+.btn-light{
+border:1px solid var(--line);
+background:var(--paper);
+}
+
+.btn-light:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 0 var(--butter);
+}
+
+.marquee{
+overflow:hidden;
+background:var(--ink);
+color:var(--bg);
+border-top:1px solid var(--ink);
+border-bottom:1px solid var(--ink);
+}
+
+.marquee div{
+white-space:nowrap;
+font-family:'Syne';
+font-size:34px;
+font-weight:800;
+padding:18px 0;
+animation:scroll 22s linear infinite;
+}
+
+@keyframes scroll{
+from{transform:translateX(0)}
+to{transform:translateX(-50%)}
+}
 
 section{padding:110px 6%}
-.section-kicker{color:#ff4d00;font-weight:900;text-transform:uppercase;letter-spacing:3px;font-size:12px;margin-bottom:18px}
-.section-title{font-family:'Anton';font-size:clamp(4rem,9vw,9rem);line-height:.9;text-transform:uppercase;margin-bottom:60px}
+
+.section-kicker{
+color:var(--clay);
+font-weight:900;
+text-transform:uppercase;
+letter-spacing:3px;
+font-size:12px;
+margin-bottom:18px;
+}
+
+.section-title{
+font-family:'Syne';
+font-size:clamp(3.2rem,7vw,7.8rem);
+line-height:.92;
+letter-spacing:-4px;
+font-weight:800;
+margin-bottom:58px;
+max-width:900px;
+}
+
+.work-intro{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:end;
+margin-bottom:70px;
+}
+
+.work-intro p{
+color:var(--muted);
+font-size:1.1rem;
+line-height:1.65;
+max-width:560px;
+}
 
 .project{
-margin-bottom:120px;border:1px solid rgba(255,255,255,.12);border-radius:34px;overflow:hidden;
-background:#101010
+margin-bottom:110px;
+border:1px solid var(--line);
+border-radius:38px;
+overflow:hidden;
+background:var(--paper);
+box-shadow:0 18px 60px rgba(17,17,17,.06);
 }
 
-.project-hero{min-height:70vh;display:grid;grid-template-columns:.9fr 1.1fr}
+.project-hero{
+display:grid;
+grid-template-columns:.92fr 1.08fr;
+min-height:680px;
+}
 
 .project-name{
-padding:50px;display:flex;flex-direction:column;justify-content:space-between;color:#050505
+padding:48px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+color:var(--ink);
+position:relative;
+overflow:hidden;
 }
-.project-name span{font-weight:900;letter-spacing:3px}
+
+.project-name:after{
+content:"";
+position:absolute;
+width:240px;
+height:240px;
+border-radius:50%;
+background:rgba(255,255,255,.28);
+right:-90px;
+bottom:-80px;
+}
+
+.project-name span{
+font-weight:900;
+letter-spacing:3px;
+font-size:12px;
+text-transform:uppercase;
+position:relative;
+z-index:2;
+}
+
 .project-name h2{
-font-family:'Anton';font-size:clamp(3.6rem,7.5vw,9rem);
-line-height:.92;letter-spacing:-1px;text-transform:uppercase
+font-family:'Syne';
+font-size:clamp(3.2rem,6.5vw,7.7rem);
+line-height:.92;
+letter-spacing:-4px;
+font-weight:800;
+text-transform:uppercase;
+position:relative;
+z-index:2;
 }
-.project-name p{font-size:1.6rem;font-weight:900;max-width:460px}
 
-.project-info{padding:50px;display:flex;flex-direction:column;justify-content:center}
-.project-info .type{color:#ff4d00;font-weight:900;text-transform:uppercase;letter-spacing:2px;font-size:12px;margin-bottom:30px}
-.project-info h3{font-size:2rem;margin:26px 0 14px}
-.project-info p{color:#c9c9c9;line-height:1.55;font-size:1.05rem;margin-bottom:18px}
+.project-name p{
+font-size:1.45rem;
+font-weight:900;
+max-width:460px;
+position:relative;
+z-index:2;
+}
 
-.case-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:34px}
-.case-card{background:#050505;border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:20px}
-.case-card small{color:#ff4d00;font-weight:900;text-transform:uppercase;letter-spacing:2px}
-.case-card strong{display:block;margin-top:10px;font-size:.92rem;line-height:1.4;color:#f4f1e8}
+.project-info{
+padding:52px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.type{
+color:var(--clay);
+font-weight:900;
+text-transform:uppercase;
+letter-spacing:2px;
+font-size:12px;
+margin-bottom:26px;
+}
+
+.project-info h3{
+font-family:'Syne';
+font-size:1.75rem;
+margin:25px 0 12px;
+letter-spacing:-1px;
+}
+
+.project-info p{
+color:var(--muted);
+line-height:1.65;
+font-size:1rem;
+margin-bottom:14px;
+}
+
+.case-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:14px;
+margin-top:34px;
+}
+
+.case-card{
+background:#F7F4EE;
+border:1px solid var(--line);
+border-radius:20px;
+padding:20px;
+}
+
+.case-card small{
+color:var(--clay);
+font-weight:900;
+text-transform:uppercase;
+letter-spacing:2px;
+font-size:10px;
+}
+
+.case-card strong{
+display:block;
+margin-top:10px;
+font-size:.9rem;
+line-height:1.45;
+}
 
 .image-zone{
-display:grid;grid-template-columns:2fr 1fr 1fr;gap:18px;padding:35px;border-top:1px solid rgba(255,255,255,.1)
+display:grid;
+grid-template-columns:2fr 1fr 1fr;
+gap:18px;
+padding:32px;
+border-top:1px solid var(--line);
+background:#FBF8F1;
 }
 
 .placeholder{
-min-height:300px;border:1px dashed rgba(255,255,255,.25);border-radius:24px;
-display:flex;align-items:center;justify-content:center;color:#777;font-weight:900;text-transform:uppercase;text-align:center;padding:20px
+min-height:300px;
+border:1px dashed rgba(17,17,17,.28);
+border-radius:26px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:rgba(17,17,17,.38);
+font-weight:900;
+text-transform:uppercase;
+text-align:center;
+padding:20px;
+background:rgba(255,255,255,.45);
 }
-.placeholder.large{min-height:420px}
 
-.orange{background:#ff4d00}
-.green{background:#c0ff2e}
-.pink{background:#ff2e88;color:white}
-.blue{background:#2563eb;color:white}
-.purple{background:#7c3aed;color:white}
-.yellow{background:#ffd000}
+.placeholder.large{min-height:430px}
 
-.about{display:grid;grid-template-columns:1fr 1fr;gap:60px;border-top:1px solid rgba(255,255,255,.1)}
-.about p{font-size:1.25rem;line-height:1.6;color:#cfcfcf}
-.skills{display:flex;flex-wrap:wrap;gap:12px;margin-top:35px}
-.skill{padding:12px 16px;border-radius:999px;background:#141414;border:1px solid rgba(255,255,255,.1);font-weight:700}
+.clay{background:var(--clay)}
+.lavender{background:var(--lavender)}
+.sage{background:var(--sage)}
+.butter{background:var(--butter)}
+.sky{background:var(--sky)}
+.coral{background:var(--coral)}
+.navy{background:var(--navy);color:var(--bg)}
+
+.about{
+display:grid;
+grid-template-columns:.95fr 1.05fr;
+gap:70px;
+border-top:1px solid var(--line);
+}
+
+.about p{
+font-size:1.18rem;
+line-height:1.75;
+color:var(--muted);
+}
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+margin-top:35px;
+}
+
+.skill{
+padding:12px 16px;
+border-radius:999px;
+background:var(--paper);
+border:1px solid var(--line);
+font-weight:800;
+font-size:14px;
+}
+
+.statement{
+margin-top:70px;
+padding:48px;
+border-radius:34px;
+background:var(--lavender);
+font-family:'Syne';
+font-size:clamp(2.2rem,5vw,5rem);
+line-height:.95;
+letter-spacing:-3px;
+font-weight:800;
+}
 
 .contact{
-background:#ff4d00;color:#050505;margin:80px 6%;border-radius:40px;padding:70px
+background:var(--ink);
+color:var(--bg);
+margin:80px 6%;
+border-radius:40px;
+padding:70px;
+position:relative;
+overflow:hidden;
 }
-.contact h2{font-family:'Anton';font-size:clamp(4rem,9vw,9rem);line-height:.9;text-transform:uppercase}
-.contact a{display:inline-block;margin-top:28px;margin-right:14px;background:#050505;color:white;padding:16px 22px;border-radius:999px;font-weight:900}
 
-footer{padding:40px 6%;color:#777;display:flex;justify-content:space-between;border-top:1px solid rgba(255,255,255,.1)}
+.contact:after{
+content:"";
+position:absolute;
+width:260px;
+height:260px;
+border-radius:50%;
+background:var(--butter);
+right:-70px;
+bottom:-90px;
+opacity:.75;
+}
 
-@media(max-width:900px){
+.contact h2{
+font-family:'Syne';
+font-size:clamp(3.4rem,8vw,8rem);
+line-height:.92;
+letter-spacing:-4px;
+font-weight:800;
+max-width:920px;
+position:relative;
+z-index:2;
+}
+
+.contact a{
+display:inline-block;
+margin-top:28px;
+margin-right:14px;
+background:var(--bg);
+color:var(--ink);
+padding:16px 22px;
+border-radius:999px;
+font-weight:900;
+position:relative;
+z-index:2;
+}
+
+footer{
+padding:40px 6%;
+color:var(--muted);
+display:flex;
+justify-content:space-between;
+border-top:1px solid var(--line);
+font-size:14px;
+}
+
+@media(max-width:1000px){
 .nav-links{display:none}
-.project-hero,.about{grid-template-columns:1fr}
-.case-grid{grid-template-columns:1fr}
+.hero h1{letter-spacing:-3px}
+.work-intro,.project-hero,.about{grid-template-columns:1fr}
+.case-grid{grid-template-columns:1fr 1fr}
 .image-zone{grid-template-columns:1fr}
-.hero h1{font-size:5rem;letter-spacing:-1px}
-.project-name h2{font-size:4rem}
+.project-hero{min-height:auto}
+.project-name{min-height:460px}
+}
+
+@media(max-width:600px){
+nav{padding:16px 5%}
+.logo-text{display:none}
+.hero{padding-top:125px}
+.hero h1{font-size:4.3rem;letter-spacing:-2px}
+.section-title{letter-spacing:-2px}
+.project-name,.project-info{padding:32px}
+.case-grid{grid-template-columns:1fr}
+.contact{padding:38px;margin:40px 5%}
 footer{flex-direction:column;gap:12px}
 }
 </style>
@@ -144,10 +595,10 @@ footer{flex-direction:column;gap:12px}
 
 <nav>
 <a href="#" class="logo">
-<div class="logo-mark">GM</div>
+<div class="logo-mark"></div>
 <div class="logo-text">
-<span>George</span>
-<span>Marte</span>
+<span>Visual Systems</span>
+<span>George Marte</span>
 </div>
 </a>
 
@@ -159,30 +610,43 @@ footer{flex-direction:column;gap:12px}
 </nav>
 
 <header class="hero">
-<div>
-<div class="tag">Graphic Designer / Aspiring Art Director</div>
-<h1>George<br>Marte</h1>
-<p>Brand identities, packaging, posters, campaign concepts, and visual systems with streetwear energy, culture-first thinking, and bold art direction.</p>
+<div class="hero-inner">
+<div class="hero-label"><span></span> Graphic Designer / Aspiring Art Director</div>
+<h1>Design systems with personality.</h1>
+<p class="hero-copy">I create brand identities, packaging, posters, campaign concepts, and visual systems shaped by culture, music, humor, movement, and strong art direction.</p>
+
+<div class="hero-meta">
+<div class="pill">Branding</div>
+<div class="pill">Packaging</div>
+<div class="pill">Posters</div>
+<div class="pill">Campaign Concepts</div>
+<div class="pill">Art Direction</div>
+</div>
+
 <div class="cta">
-<a href="#work" class="btn btn-orange">View Work</a>
-<a href="mailto:martedgeorge@gmail.com" class="btn btn-outline">Email Me</a>
+<a href="#work" class="btn btn-dark">View Work</a>
+<a href="mailto:martedgeorge@gmail.com" class="btn btn-light">Email Me</a>
 </div>
 </div>
 </header>
 
 <div class="marquee">
-<div>BRANDING ✦ PACKAGING ✦ POSTERS ✦ CAMPAIGNS ✦ CULTURE ✦ ART DIRECTION ✦ BRANDING ✦ PACKAGING ✦ POSTERS ✦ CAMPAIGNS ✦ CULTURE ✦ ART DIRECTION ✦</div>
+<div>BRANDING ✦ PACKAGING ✦ POSTERS ✦ CAMPAIGNS ✦ CULTURE ✦ VISUAL SYSTEMS ✦ BRANDING ✦ PACKAGING ✦ POSTERS ✦ CAMPAIGNS ✦ CULTURE ✦ VISUAL SYSTEMS ✦</div>
 </div>
 
 <section id="work">
+<div class="work-intro">
+<div>
 <div class="section-kicker">Selected Work</div>
-<h1 class="section-title">Projects<br>With Bite</h1>
+<h1 class="section-title">Projects with bite.</h1>
+</div>
+<p>Each project is built as a visual system, not just a one-off design. The goal is to show concept, process, identity, and how the work expands across packaging, campaigns, merch, and digital touchpoints.</p>
+</div>
 
-<!-- OVERLOAD -->
 <article class="project">
 <div class="project-hero">
-<div class="project-name orange">
-<span>01 / BRANDING / PACKAGING DESIGN</span>
+<div class="project-name clay">
+<span>01 / Branding / Packaging Design</span>
 <h2>Overload</h2>
 <p>Caffeinated Chaos</p>
 </div>
@@ -209,11 +673,10 @@ footer{flex-direction:column;gap:12px}
 </div>
 </article>
 
-<!-- LOST & FOUND -->
 <article class="project">
 <div class="project-hero">
-<div class="project-name purple">
-<span>02 / VISUAL IDENTITY / EVENT BRANDING</span>
+<div class="project-name lavender">
+<span>02 / Visual Identity / Event Branding</span>
 <h2>Lost & Found</h2>
 <p>Mapping Memory Through Music</p>
 </div>
@@ -240,11 +703,10 @@ footer{flex-direction:column;gap:12px}
 </div>
 </article>
 
-<!-- NIGHT SHIFT -->
 <article class="project">
 <div class="project-hero">
-<div class="project-name green">
-<span>03 / CONCEPT / PACKAGING DESIGN</span>
+<div class="project-name navy">
+<span>03 / Concept / Packaging Design</span>
 <h2>Night Shift</h2>
 <p>Brewed For The Late Hours</p>
 </div>
@@ -271,11 +733,10 @@ footer{flex-direction:column;gap:12px}
 </div>
 </article>
 
-<!-- ART CLUB -->
 <article class="project">
 <div class="project-hero">
-<div class="project-name pink">
-<span>04 / VISUAL IDENTITY / EP CAMPAIGN</span>
+<div class="project-name butter">
+<span>04 / Visual Identity / EP Campaign</span>
 <h2>Art Club</h2>
 <p>Crystal Children</p>
 </div>
@@ -302,11 +763,10 @@ footer{flex-direction:column;gap:12px}
 </div>
 </article>
 
-<!-- NIKE -->
 <article class="project">
 <div class="project-hero">
-<div class="project-name blue">
-<span>05 / CONCEPT CAMPAIGN / ART DIRECTION</span>
+<div class="project-name sky">
+<span>05 / Concept Campaign / Art Direction</span>
 <h2>Nike x McDonald’s</h2>
 <p>I’m Lovin’ Every Step</p>
 </div>
@@ -333,11 +793,10 @@ footer{flex-direction:column;gap:12px}
 </div>
 </article>
 
-<!-- FRAT HOUSE -->
 <article class="project">
 <div class="project-hero">
-<div class="project-name yellow">
-<span>06 / BAR BRANDING / LOGO / PACKAGING</span>
+<div class="project-name sage">
+<span>06 / Bar Branding / Logo / Packaging</span>
 <h2>Frat House</h2>
 <p>College Chaos, Branded</p>
 </div>
@@ -369,10 +828,11 @@ footer{flex-direction:column;gap:12px}
 <section id="about" class="about">
 <div>
 <div class="section-kicker">About</div>
-<h1 class="section-title">Design With Personality</h1>
+<h1 class="section-title">Design with personality.</h1>
 </div>
 <div>
 <p>I’m George Marte, a graphic designer and aspiring art director focused on branding, packaging, poster design, campaign concepts, and visual systems. My work blends bold visuals, storytelling, and cultural references to create design that feels intentional, memorable, and full of personality.</p>
+
 <div class="skills">
 <span class="skill">Branding</span>
 <span class="skill">Art Direction</span>
@@ -389,8 +849,12 @@ footer{flex-direction:column;gap:12px}
 </div>
 </section>
 
+<section class="statement">
+I’m interested in work that feels visual, cultural, expressive, and built around a strong idea.
+</section>
+
 <section id="contact" class="contact">
-<h2>Let’s Make<br>Something Worth<br>Looking At.</h2>
+<h2>Let’s make something worth looking at.</h2>
 <a href="mailto:martedgeorge@gmail.com">martedgeorge@gmail.com</a>
 <a href="https://instagram.com/kiddi3go" target="_blank">@kiddi3go</a>
 </section>
